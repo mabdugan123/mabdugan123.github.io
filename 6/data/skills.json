@@ -1,904 +1,1180 @@
 {
+  "heading": {
+    "title": "Survival Skills Explorer",
+    "description": "Choose a category to start learning outdoor survival skills."
+  },
+  "gridLabel": "Survival skill categories",
   "categories": [
     {
       "id": "fire",
       "name": "Fire",
+      "description": "Learn about different fire structures and how they work.",
       "image": "images/fire.jpg",
-      "description": "Learn different methods for safely building a fire outdoors.",
+      "imageAlt": "Controlled campfire in an outdoor fire ring",
+      "buttonText": "Explore Fire →",
+      "heading": {
+        "title": "Fire Skills",
+        "description": "Choose a fire type to learn about its structure, materials, and safety."
+      },
+      "gridLabel": "Fire skills",
+      "backText": "← Back to Explorer",
       "skills": [
         {
           "id": "teepee",
           "name": "Teepee Fire",
+          "description": "A cone-shaped fire structure that allows air to move between the sticks.",
           "image": "images/teepee.jpg",
-          "description": "The teepee fire is a simple fire structure that allows heat and flames to rise through the center.",
-          "steps": [
-            "Place dry tinder in the center.",
-            "Arrange small sticks around the tinder in a teepee shape.",
-            "Leave a small opening so air can reach the fire.",
-            "Light the tinder.",
-            "Add larger pieces of wood as the fire grows."
-          ],
-          "imageAlt": "Teepee fire structure made with kindling around a small fire",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Teepee fire structure made with kindling",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Teepee Fire",
+            "image": "images/teepee.jpg",
+            "imageAlt": "Teepee fire structure made with kindling around a small fire",
+            "introduction": [
+              "The teepee fire is a common way to arrange wood when starting a campfire."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A teepee fire uses small pieces of wood arranged in a cone shape around tinder. The structure leaves open spaces that allow air to reach the fire."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "This structure can be useful when starting a campfire because small pieces of wood can catch fire before larger pieces are added."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Tinder is placed in the center. Small dry sticks are placed around the tinder in a cone shape. Larger pieces of wood can be added after the fire becomes stronger."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Dry tinder",
+                  "Small dry sticks",
+                  "Larger firewood",
+                  "Safe ignition source"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A teepee fire uses small pieces of wood arranged in a cone shape around tinder. The structure leaves open spaces that allow air to reach the fire."
+                "Only build a fire where fires are allowed. Keep the area around the fire clear and never leave a burning fire unattended."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "This structure can be useful when starting a campfire because small pieces of wood can catch fire before larger pieces are added."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Tinder is placed in the center. Small dry sticks are placed around the tinder in a cone shape. Larger pieces of wood can be added after the fire becomes stronger."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Dry tinder",
-                "Small dry sticks",
-                "Larger firewood",
-                "Safe ignition source"
+                {
+                  "prefix": "Fire safety information:",
+                  "label": "National Park Service - Campfires",
+                  "url": "https://www.nps.gov/articles/campfires.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Campfires",
-              "url": "https://www.nps.gov/articles/campfires.htm"
-            }
-          ],
-          "safety": "Only build a fire where fires are allowed. Keep the area around the fire clear and never leave a burning fire unattended."
+            },
+            "backText": "← Back to Fire Skills"
+          }
         },
         {
           "id": "log-cabin",
           "name": "Log Cabin Fire",
+          "description": "A fire structure made by stacking wood in alternating layers.",
           "image": "images/log-cabin.jpg",
-          "description": "The log cabin fire uses stacked wood to create a stable and long-lasting fire.",
-          "steps": [
-            "Place tinder and small kindling in the center.",
-            "Place two pieces of wood parallel to each other.",
-            "Add two more pieces across the first two.",
-            "Continue stacking the wood in alternating directions.",
-            "Light the tinder in the center."
-          ],
-          "imageAlt": "Log cabin fire structure with stacked pieces of firewood",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Log cabin fire structure made with stacked wood",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Log Cabin Fire",
+            "image": "images/log-cabin.jpg",
+            "imageAlt": "Log cabin fire structure with stacked pieces of firewood",
+            "introduction": [
+              "A log cabin fire uses pieces of wood stacked in alternating layers."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "The wood is arranged in a square shape. Each layer is placed across the layer below it, similar to the walls of a small log cabin."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "This structure can be used for a campfire when a stable arrangement of firewood is wanted."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Two pieces of wood are placed parallel to each other. Another two pieces are placed across them. More layers can then be added while leaving space for air."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Tinder",
+                  "Kindling",
+                  "Several pieces of firewood",
+                  "Safe ignition source"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "The wood is arranged in a square shape. Each layer is placed across the layer below it, similar to the walls of a small log cabin."
+                "Use established fire areas when available. Keep water nearby and completely extinguish the fire before leaving the area."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "This structure can be used for a campfire when a stable arrangement of firewood is wanted."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Two pieces of wood are placed parallel to each other. Another two pieces are placed across them. More layers can then be added while leaving space for air."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Tinder",
-                "Kindling",
-                "Several pieces of firewood",
-                "Safe ignition source"
+                {
+                  "prefix": "Fire safety information:",
+                  "label": "National Park Service - Campfires",
+                  "url": "https://www.nps.gov/articles/campfires.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Campfires",
-              "url": "https://www.nps.gov/articles/campfires.htm"
-            }
-          ],
-          "safety": "Use established fire areas when available. Keep water nearby and completely extinguish the fire before leaving the area."
+            },
+            "backText": "← Back to Fire Skills"
+          }
         },
         {
-          "id": "lean-to-fire",
-          "name": "Lean-To Fire",
+          "id": "lean-to",
+          "name": "Lean-to Fire",
+          "description": "A fire structure where small sticks lean against a larger piece of wood.",
           "image": "images/lean-to-fire.jpg",
-          "description": "The lean-to fire protects a small flame and is useful when there is some wind.",
-          "steps": [
-            "Place a large stick or log on the ground.",
-            "Put tinder next to the log.",
-            "Lean small sticks over the tinder against the log.",
-            "Light the tinder.",
-            "Add larger sticks as the fire grows."
-          ],
-          "imageAlt": "Lean-to fire structure with small sticks leaning against a larger log",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Lean-to fire structure with sticks leaning against a log",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Lean-to Fire",
+            "image": "images/lean-to-fire.jpg",
+            "imageAlt": "Lean-to fire structure with small sticks leaning against a larger log",
+            "introduction": [
+              "The lean-to fire uses a larger piece of wood to support smaller pieces of kindling."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A larger piece of wood is placed on the ground. Smaller sticks are leaned against it with tinder placed underneath."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "It is a simple fire structure that can provide support for small pieces of kindling while a fire is being started."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Tinder is placed next to the larger piece of wood. Small sticks lean over the tinder. More wood can be added carefully after the fire begins burning."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Tinder",
+                  "Small dry sticks",
+                  "One larger piece of wood",
+                  "Additional firewood"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A larger piece of wood is placed on the ground. Smaller sticks are leaned against it with tinder placed underneath."
+                "Never build a fire where it is prohibited. Keep the fire small and under control and completely extinguish it when finished."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "It is a simple fire structure that can provide support for small pieces of kindling while a fire is being started."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Tinder is placed next to the larger piece of wood. Small sticks lean over the tinder. More wood can be added carefully after the fire begins burning."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Tinder",
-                "Small dry sticks",
-                "One larger piece of wood",
-                "Additional firewood"
+                {
+                  "prefix": "Fire safety information:",
+                  "label": "National Park Service - Campfires",
+                  "url": "https://www.nps.gov/articles/campfires.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Campfires",
-              "url": "https://www.nps.gov/articles/campfires.htm"
-            }
-          ],
-          "safety": "Never build a fire where it is prohibited. Keep the fire small and under control and completely extinguish it when finished."
+            },
+            "backText": "← Back to Fire Skills"
+          }
         },
         {
-          "id": "star-fire",
+          "id": "star",
           "name": "Star Fire",
+          "description": "A fire where long logs point toward a small burning center.",
           "image": "images/star-fire.jpg",
-          "description": "The star fire uses several logs pointing toward a small fire in the center.",
-          "steps": [
-            "Build a small fire in the center.",
-            "Place several logs around it like the points of a star.",
-            "Push the ends of the logs toward the flames.",
-            "Move the logs inward as they burn.",
-            "Keep the center of the fire clear enough for airflow."
-          ],
-          "imageAlt": "Star fire with logs pointing toward a burning center",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Star fire with logs pointing toward the center",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Star Fire",
+            "image": "images/star-fire.jpg",
+            "imageAlt": "Star fire with logs pointing toward a burning center",
+            "introduction": [
+              "A star fire places several pieces of wood around a central burning area."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "Several logs are placed on the ground with one end of each log pointing toward the center. From above, the arrangement looks like a star."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "The arrangement allows wood to be moved toward the center as the ends burn."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "A small fire is started in the center. The ends of the larger pieces of wood are positioned near the flame and can be moved inward carefully as they burn."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Tinder",
+                  "Kindling",
+                  "Several longer pieces of firewood",
+                  "Safe ignition source"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "Several logs are placed on the ground with one end of each log pointing toward the center. From above, the arrangement looks like a star."
+                "Keep the fire within an established fire area when possible. Never leave it unattended and completely extinguish it before leaving."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "The arrangement allows wood to be moved toward the center as the ends burn."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "A small fire is started in the center. The ends of the larger pieces of wood are positioned near the flame and can be moved inward carefully as they burn."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Tinder",
-                "Kindling",
-                "Several longer pieces of firewood",
-                "Safe ignition source"
+                {
+                  "prefix": "Fire safety information:",
+                  "label": "National Park Service - Campfires",
+                  "url": "https://www.nps.gov/articles/campfires.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Campfires",
-              "url": "https://www.nps.gov/articles/campfires.htm"
-            }
-          ],
-          "safety": "Keep the fire within an established fire area when possible. Never leave it unattended and completely extinguish it before leaving."
+            },
+            "backText": "← Back to Fire Skills"
+          }
         }
-      ],
-      "imageAlt": "Fire survival skills"
+      ]
     },
     {
       "id": "shelter",
       "name": "Shelter",
+      "description": "Learn about simple shelters for different outdoor situations.",
       "image": "images/shelter.jpg",
-      "description": "Learn basic ways to create protection from weather and outdoor conditions.",
+      "imageAlt": "Simple wooden survival shelter in a forest",
+      "buttonText": "Explore Shelter →",
+      "heading": {
+        "title": "Shelter Skills",
+        "description": "Choose a shelter type to learn about its purpose, materials, and safety."
+      },
+      "gridLabel": "Shelter skills",
+      "backText": "← Back to Explorer",
       "skills": [
         {
-          "id": "lean-to-shelter",
-          "name": "Lean-To Shelter",
+          "id": "lean-to",
+          "name": "Lean-to Shelter",
+          "description": "A simple shelter with a sloping roof.",
           "image": "images/lean-to-shelter.jpg",
-          "description": "A lean-to is a simple shelter made by leaning branches against a strong support.",
-          "steps": [
-            "Find a strong tree or support.",
-            "Place a long branch against the support.",
-            "Lean smaller branches against the main branch.",
-            "Cover the structure with leaves and other natural material.",
-            "Make the covering thick enough to provide protection."
-          ],
-          "imageAlt": "Lean-to survival shelter made from branches",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Lean-to shelter made from branches",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Lean-to Shelter",
+            "image": "images/lean-to-shelter.jpg",
+            "imageAlt": "Lean-to survival shelter made from branches",
+            "introduction": [
+              "A lean-to is a simple outdoor shelter with a sloping roof."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A lean-to shelter has a roof that slopes from a higher support down toward the ground. The roof can be covered with available materials to provide protection."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "A lean-to can provide basic protection from wind, light rain, and direct sunlight when spending time outdoors."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "A strong horizontal support is used as the main part of the shelter. Smaller branches can lean against it to create the roof. The roof can then be covered."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Strong support",
+                  "Branches or poles",
+                  "Leaves or other covering",
+                  "Cord if available"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A lean-to shelter has a roof that slopes from a higher support down toward the ground. The roof can be covered with available materials to provide protection."
+                "Check the area before building. Avoid dead trees, unstable branches, flood areas, and other possible hazards."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "A lean-to can provide basic protection from wind, light rain, and direct sunlight when spending time outdoors."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "A strong horizontal support is used as the main part of the shelter. Smaller branches can lean against it to create the roof. The roof can then be covered."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Strong support",
-                "Branches or poles",
-                "Leaves or other covering",
-                "Cord if available"
+                {
+                  "prefix": "Outdoor preparation and shelter information:",
+                  "label": "National Park Service - Ten Essentials",
+                  "url": "https://www.nps.gov/articles/10essentials.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Ten Essentials",
-              "url": "https://www.nps.gov/articles/10essentials.htm"
-            }
-          ],
-          "safety": "Check the area before building. Avoid dead trees, unstable branches, flood areas, and other possible hazards."
+            },
+            "backText": "← Back to Shelter Skills"
+          }
         },
         {
-          "id": "tarp-shelter",
+          "id": "tarp",
           "name": "Tarp Shelter",
+          "description": "A lightweight shelter made using a tarp.",
           "image": "images/tarp-shelter.jpg",
-          "description": "A tarp shelter provides quick protection from rain, wind, and sun.",
-          "steps": [
-            "Choose two strong trees or supports.",
-            "Tie a rope between them.",
-            "Place the tarp over the rope.",
-            "Secure the corners of the tarp to the ground.",
-            "Make sure the tarp is tight enough to shed rain."
-          ],
-          "imageAlt": "Tarp survival shelter secured between trees",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Tarp shelter secured between trees",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Tarp Shelter",
+            "image": "images/tarp-shelter.jpg",
+            "imageAlt": "Tarp survival shelter secured between trees",
+            "introduction": [
+              "A tarp can be used to create a simple temporary outdoor shelter."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A tarp shelter uses a waterproof sheet supported by trees, poles, or other strong anchor points."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "It can provide temporary protection from rain, wind, or direct sunlight while outdoors."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "A tarp is secured above the ground using cord and strong anchor points. It can be angled so rainwater runs away from the sheltered area."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Tarp",
+                  "Cord or rope",
+                  "Trees or poles",
+                  "Safe anchor points"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A tarp shelter uses a waterproof sheet supported by trees, poles, or other strong anchor points."
+                "Make sure the shelter is securely attached. Do not place it under dead branches or in areas where water may collect."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "It can provide temporary protection from rain, wind, or direct sunlight while outdoors."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "A tarp is secured above the ground using cord and strong anchor points. It can be angled so rainwater runs away from the sheltered area."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Tarp",
-                "Cord or rope",
-                "Trees or poles",
-                "Safe anchor points"
+                {
+                  "prefix": "Outdoor preparation and shelter information:",
+                  "label": "National Park Service - Ten Essentials",
+                  "url": "https://www.nps.gov/articles/10essentials.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Ten Essentials",
-              "url": "https://www.nps.gov/articles/10essentials.htm"
-            }
-          ],
-          "safety": "Make sure the shelter is securely attached. Do not place it under dead branches or in areas where water may collect."
+            },
+            "backText": "← Back to Shelter Skills"
+          }
         },
         {
           "id": "debris-hut",
           "name": "Debris Hut",
+          "description": "A basic shelter made with natural materials.",
           "image": "images/debris-hut.jpg",
-          "description": "A debris hut uses branches, leaves, and other natural materials for insulation.",
-          "steps": [
-            "Create a strong ridge pole.",
-            "Lean branches along both sides.",
-            "Cover the branches with leaves and debris.",
-            "Add a thick layer for insulation.",
-            "Leave a small opening for entering the shelter."
-          ],
           "imageAlt": "Debris hut made from branches and forest materials",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Debris Hut",
+            "image": "images/debris-hut.jpg",
+            "imageAlt": "Debris hut made from branches and forest materials",
+            "introduction": [
+              "A debris hut is a small shelter made mainly from natural materials."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A debris hut uses branches to create a basic frame. Leaves and other dry natural materials can cover the frame."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "It can provide basic protection when a normal tent or tarp is not available."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "A strong branch forms the main support. Smaller branches are placed along the sides. Dry leaves and other debris can then cover the frame."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Strong branches",
+                  "Smaller sticks",
+                  "Dry leaves",
+                  "Other natural covering materials"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A debris hut uses branches to create a basic frame. Leaves and other dry natural materials can cover the frame."
+                "Check the location for hazards before building. Avoid unstable trees, falling branches, animal areas, and places that may flood."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "It can provide basic protection when a normal tent or tarp is not available."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "A strong branch forms the main support. Smaller branches are placed along the sides. Dry leaves and other debris can then cover the frame."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Strong branches",
-                "Smaller sticks",
-                "Dry leaves",
-                "Other natural covering materials"
+                {
+                  "prefix": "Outdoor preparation and shelter information:",
+                  "label": "National Park Service - Ten Essentials",
+                  "url": "https://www.nps.gov/articles/10essentials.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Ten Essentials",
-              "url": "https://www.nps.gov/articles/10essentials.htm"
-            }
-          ],
-          "safety": "Check the location for hazards before building. Avoid unstable trees, falling branches, animal areas, and places that may flood."
+            },
+            "backText": "← Back to Shelter Skills"
+          }
         },
         {
-          "id": "snow-shelter",
+          "id": "snow",
           "name": "Snow Shelter",
+          "description": "A shelter designed for snowy conditions.",
           "image": "images/snow-shelter.jpg",
-          "description": "A snow shelter can provide protection from cold temperatures and wind.",
-          "steps": [
-            "Choose an area with deep and stable snow.",
-            "Build or locate a large pile of snow.",
-            "Carefully create a protected interior space.",
-            "Keep the walls thick for insulation.",
-            "Make sure the shelter has proper ventilation."
-          ],
           "imageAlt": "Emergency survival shelter built from snow",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Snow Shelter",
+            "image": "images/snow-shelter.jpg",
+            "imageAlt": "Emergency survival shelter built from snow",
+            "introduction": [
+              "Snow can sometimes be used to create temporary protection in snowy environments."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A snow shelter is a temporary structure that uses snow as part of its walls or covering. Snow can help block wind and provide insulation."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "Snow shelters are associated with cold and snowy environments where protection from wind and cold is important."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Snow is shaped or dug to create a protected space. The exact design depends on the snow, weather, location, and available equipment."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Deep or suitable snow",
+                  "Snow shovel if available",
+                  "Warm clothing",
+                  "Insulation from the ground"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A snow shelter is a temporary structure that uses snow as part of its walls or covering. Snow can help block wind and provide insulation."
+                "Snow shelters can collapse and poor ventilation can be dangerous. Cold-weather shelter building requires proper knowledge and careful conditions."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "Snow shelters are associated with cold and snowy environments where protection from wind and cold is important."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Snow is shaped or dug to create a protected space. The exact design depends on the snow, weather, location, and available equipment."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Deep or suitable snow",
-                "Snow shovel if available",
-                "Warm clothing",
-                "Insulation from the ground"
+                {
+                  "prefix": "Outdoor preparation and shelter information:",
+                  "label": "National Park Service - Ten Essentials",
+                  "url": "https://www.nps.gov/articles/10essentials.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Ten Essentials",
-              "url": "https://www.nps.gov/articles/10essentials.htm"
-            }
-          ],
-          "safety": "Snow shelters can collapse and poor ventilation can be dangerous. Cold-weather shelter building requires proper knowledge and careful conditions."
+            },
+            "backText": "← Back to Shelter Skills"
+          }
         }
-      ],
-      "imageAlt": "Shelter survival skills"
+      ]
     },
     {
       "id": "water",
       "name": "Water",
+      "description": "Learn about collecting and preparing water outdoors.",
       "image": "images/water.jpg",
-      "description": "Learn basic methods for collecting and making water safer outdoors.",
+      "imageAlt": "Water being poured into a metal cup from a water bottle",
+      "buttonText": "Explore Water →",
+      "heading": {
+        "title": "Water Skills",
+        "description": "Choose a water skill to learn about its purpose, materials, and safety."
+      },
+      "gridLabel": "Water skills",
+      "backText": "← Back to Explorer",
       "skills": [
         {
           "id": "boiling",
-          "name": "Boiling Water",
+          "name": "Boiling",
+          "description": "Learn how boiling can help make water safer to drink.",
           "image": "images/boiling.jpg",
-          "description": "Boiling is one of the simplest methods for treating water outdoors.",
-          "steps": [
-            "Collect the clearest water available.",
-            "Filter out visible dirt and debris if necessary.",
-            "Place the water in a heat-safe container.",
-            "Bring the water to a rolling boil.",
-            "Allow the water to cool before drinking."
-          ],
-          "imageAlt": "Water boiling in a metal camping pot over a fire",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Water boiling in a metal camping pot",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Boiling Water",
+            "image": "images/boiling.jpg",
+            "imageAlt": "Water boiling in a metal camping pot over a fire",
+            "introduction": [
+              "Boiling is one method that can help make water safer to drink."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "Boiling uses high heat to kill many disease-causing microorganisms that may be present in water."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "Boiling can be used when the safety of available water is uncertain and a safe heat source is available."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "If the water is cloudy, it should first be allowed to settle and be filtered through a clean cloth when possible. The water can then be brought to a rolling boil before being allowed to cool."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Water",
+                  "Heat-safe container",
+                  "Safe heat source",
+                  "Clean storage container"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "Boiling uses high heat to kill many disease-causing microorganisms that may be present in water."
+                "Boiling does not remove every type of chemical contamination. Avoid water that may contain fuel, toxic chemicals, or other dangerous pollutants."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "Boiling can be used when the safety of available water is uncertain and a safe heat source is available."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "If the water is cloudy, it should first be allowed to settle and be filtered through a clean cloth when possible. The water can then be brought to a rolling boil before being allowed to cool."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Water",
-                "Heat-safe container",
-                "Safe heat source",
-                "Clean storage container"
+                {
+                  "prefix": "Water safety information:",
+                  "label": "CDC - Making Water Safe in an Emergency",
+                  "url": "https://www.cdc.gov/water-emergency/about/index.html",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "CDC - Making Water Safe in an Emergency",
-              "url": "https://www.cdc.gov/water-emergency/about/index.html"
-            }
-          ],
-          "safety": "Boiling does not remove every type of chemical contamination. Avoid water that may contain fuel, toxic chemicals, or other dangerous pollutants."
+            },
+            "backText": "← Back to Water Skills"
+          }
         },
         {
           "id": "filtering",
-          "name": "Filtering Water",
+          "name": "Water Filtering",
+          "description": "Learn how portable filters can be used to prepare water.",
           "image": "images/filtering.jpg",
-          "description": "Filtering can remove dirt and other particles from collected water.",
-          "steps": [
-            "Collect water in a clean container.",
-            "Use a proper outdoor water filter when available.",
-            "Follow the instructions for the filter.",
-            "Collect the filtered water in another clean container.",
-            "Use additional purification when necessary."
-          ],
-          "imageAlt": "Portable water filter being used beside a mountain stream",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Portable water filter used outdoors",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Water Filtering",
+            "image": "images/filtering.jpg",
+            "imageAlt": "Portable water filter being used beside a mountain stream",
+            "introduction": [
+              "Portable water filters can help remove certain contaminants from outdoor water."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "Water filtering passes water through a filter designed to remove certain particles and microorganisms."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "A portable water filter can be useful while hiking or camping when treated drinking water is not available."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Water passes through the filter before it reaches a clean container. Different filters remove different contaminants, so the manufacturer's instructions are important."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Portable water filter",
+                  "Water source",
+                  "Clean container"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "Water filtering passes water through a filter designed to remove certain particles and microorganisms."
+                "Not every filter removes viruses, chemicals, or all other contaminants. Use a filter designed for the situation and follow its instructions."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "A portable water filter can be useful while hiking or camping when treated drinking water is not available."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Water passes through the filter before it reaches a clean container. Different filters remove different contaminants, so the manufacturer's instructions are important."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Portable water filter",
-                "Water source",
-                "Clean container"
+                {
+                  "prefix": "Water safety information:",
+                  "label": "CDC - Making Water Safe in an Emergency",
+                  "url": "https://www.cdc.gov/water-emergency/about/index.html",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "CDC - Making Water Safe in an Emergency",
-              "url": "https://www.cdc.gov/water-emergency/about/index.html"
-            }
-          ],
-          "safety": "Not every filter removes viruses, chemicals, or all other contaminants. Use a filter designed for the situation and follow its instructions."
+            },
+            "backText": "← Back to Water Skills"
+          }
         },
         {
           "id": "rainwater",
           "name": "Collecting Rainwater",
+          "description": "Learn how rainwater can be collected using a clean surface.",
           "image": "images/rainwater.jpg",
-          "description": "Rainwater can be collected using a clean surface and container.",
-          "steps": [
-            "Find a clean container.",
-            "Place a tarp or another clean surface where it can catch rain.",
-            "Angle the surface toward the container.",
-            "Allow the rainwater to collect.",
-            "Treat the collected water before drinking when necessary."
-          ],
-          "imageAlt": "Rainwater being collected from a tarp into a container",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Rainwater being collected from a tarp",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Collecting Rainwater",
+            "image": "images/rainwater.jpg",
+            "imageAlt": "Rainwater being collected from a tarp into a container",
+            "introduction": [
+              "Rainwater can be collected using a clean surface and container."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "Rainwater collection means catching rain and directing it into a container for later use."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "It may provide an additional source of water when rain is available and normal water supplies are limited."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "A clean tarp or similar surface can direct falling rain toward a clean container. The collected water should be protected from additional contamination."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Clean container",
+                  "Clean tarp or collection surface",
+                  "Cord if needed"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "Rainwater collection means catching rain and directing it into a container for later use."
+                "Rainwater is not automatically safe to drink. It can collect germs and chemicals from the air or collection surface. Treat water when necessary before drinking it."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "It may provide an additional source of water when rain is available and normal water supplies are limited."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "A clean tarp or similar surface can direct falling rain toward a clean container. The collected water should be protected from additional contamination."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Clean container",
-                "Clean tarp or collection surface",
-                "Cord if needed"
+                {
+                  "prefix": "Emergency water information:",
+                  "label": "CDC - Finding Clean Water in an Emergency",
+                  "url": "https://www.cdc.gov/water-emergency/about/how-to-find-clean-water-in-an-emergency.html",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "CDC - Finding Clean Water in an Emergency",
-              "url": "https://www.cdc.gov/water-emergency/about/how-to-find-clean-water-in-an-emergency.html"
-            }
-          ],
-          "safety": "Rainwater is not automatically safe to drink. It can collect germs and chemicals from the air or collection surface. Treat water when necessary before drinking it."
+            },
+            "backText": "← Back to Water Skills"
+          }
         },
         {
           "id": "solar-still",
           "name": "Solar Still",
+          "description": "Learn how a solar still collects small amounts of water.",
           "image": "images/solar-still.jpg",
-          "description": "A solar still uses heat from the sun to collect a small amount of condensed water.",
-          "steps": [
-            "Dig a hole in an area that receives sunlight.",
-            "Place a container in the center.",
-            "Cover the hole with clear plastic.",
-            "Place a small weight over the center of the plastic.",
-            "Allow condensation to drip into the container."
-          ],
-          "imageAlt": "Solar still collecting water using clear plastic and a container",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Solar still using clear plastic and a collection container",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Solar Still",
+            "image": "images/solar-still.jpg",
+            "imageAlt": "Solar still collecting water using clear plastic and a container",
+            "introduction": [
+              "A solar still uses heat, evaporation, and condensation to collect a small amount of water."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A solar still is a simple system where heat causes moisture to evaporate. The water vapor then condenses on a surface and can be collected."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "It can demonstrate one way that water can move through evaporation and condensation when sunlight is available."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Sunlight warms moisture inside a covered area. Water evaporates and reaches the cooler covering. It then condenses into droplets that can move toward a collection container."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Clear plastic sheet",
+                  "Collection container",
+                  "Small weight or stone",
+                  "Sunny location"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A solar still is a simple system where heat causes moisture to evaporate. The water vapor then condenses on a surface and can be collected."
+                "A small solar still may produce very little water and should not be depended on as the only source of drinking water."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "It can demonstrate one way that water can move through evaporation and condensation when sunlight is available."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Sunlight warms moisture inside a covered area. Water evaporates and reaches the cooler covering. It then condenses into droplets that can move toward a collection container."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Clear plastic sheet",
-                "Collection container",
-                "Small weight or stone",
-                "Sunny location"
+                {
+                  "prefix": "General emergency preparedness information:",
+                  "label": "American Red Cross - Survival Skills",
+                  "url": "https://www.redcross.org/take-a-class/resources/articles/11-survival-skills-to-know",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "American Red Cross - Survival Skills",
-              "url": "https://www.redcross.org/take-a-class/resources/articles/11-survival-skills-to-know"
-            }
-          ],
-          "safety": "A small solar still may produce very little water and should not be depended on as the only source of drinking water."
+            },
+            "backText": "← Back to Water Skills"
+          }
         }
-      ],
-      "imageAlt": "Water survival skills"
+      ]
     },
     {
       "id": "navigation",
-      "name": "Navigation",
+      "name": "Navigation & Signaling",
+      "description": "Learn basic navigation and ways to signal for help.",
       "image": "images/navigation.jpg",
-      "description": "Learn methods that can help you navigate or signal for assistance outdoors.",
+      "imageAlt": "Compass on a map with a forest in the background",
+      "buttonText": "Explore Navigation →",
+      "heading": {
+        "title": "Navigation & Signaling",
+        "description": "Choose a skill to learn about navigation and ways to signal for help."
+      },
+      "gridLabel": "Navigation and signaling skills",
+      "backText": "← Back to Explorer",
       "skills": [
         {
           "id": "compass",
-          "name": "Using a Compass",
+          "name": "Compass",
+          "description": "Learn how a compass can help identify direction outdoors.",
           "image": "images/compass.jpg",
-          "description": "A compass helps determine direction and can help you follow a planned route.",
-          "steps": [
-            "Hold the compass flat in your hand.",
-            "Allow the compass needle to settle.",
-            "Identify north using the compass needle.",
-            "Determine the direction you need to travel.",
-            "Regularly check your direction while moving."
-          ],
-          "imageAlt": "Compass being used for navigation in the wilderness",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Compass used for wilderness navigation",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Compass",
+            "image": "images/compass.jpg",
+            "imageAlt": "Compass being used for navigation in the wilderness",
+            "introduction": [
+              "A compass is a navigation tool that helps identify direction."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A basic magnetic compass has a needle that aligns with Earth's magnetic field. This helps the user identify magnetic north and other directions."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "A compass can be useful while hiking, camping, or navigating an unfamiliar area, especially when used together with a map."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "The compass should be held flat and away from objects that may interfere with it. The needle helps identify direction, which can then be compared with a map or route."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Compass",
+                  "Map when available",
+                  "Knowledge of the planned route"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A basic magnetic compass has a needle that aligns with Earth's magnetic field. This helps the user identify magnetic north and other directions."
+                "Learn how to use a compass before depending on it outdoors. Electronic devices and some metal objects can also affect compass readings."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "A compass can be useful while hiking, camping, or navigating an unfamiliar area, especially when used together with a map."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "The compass should be held flat and away from objects that may interfere with it. The needle helps identify direction, which can then be compared with a map or route."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Compass",
-                "Map when available",
-                "Knowledge of the planned route"
+                {
+                  "prefix": "Navigation and outdoor safety information:",
+                  "label": "National Park Service - Ten Essentials",
+                  "url": "https://www.nps.gov/articles/10essentials.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Ten Essentials",
-              "url": "https://www.nps.gov/articles/10essentials.htm"
-            }
-          ],
-          "safety": "Learn how to use a compass before depending on it outdoors. Electronic devices and some metal objects can also affect compass readings."
+            },
+            "backText": "← Back to Navigation Skills"
+          }
         },
         {
           "id": "trail-markers",
           "name": "Trail Markers",
+          "description": "Learn how trail markers can help hikers follow a route.",
           "image": "images/trail-markers.jpg",
-          "description": "Trail markers can help hikers identify and follow established routes.",
-          "steps": [
-            "Look for official trail signs or painted markers.",
-            "Pay attention to the color and shape of markers.",
-            "Check markers regularly while traveling.",
-            "Avoid leaving the marked trail unnecessarily.",
-            "Turn back if you cannot confidently identify the route."
-          ],
-          "imageAlt": "Examples of trail markers used for outdoor navigation",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Examples of outdoor trail markers",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Trail Markers",
+            "image": "images/trail-markers.jpg",
+            "imageAlt": "Examples of trail markers used for outdoor navigation",
+            "introduction": [
+              "Trail markers help hikers identify and follow established trails."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "Trail markers are signs, symbols, posts, or painted markings placed along established trails to help people follow a route."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "Pay attention to trail markers when hiking on marked trails, especially near turns, intersections, and changes in the route."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Hikers follow the official markings for their selected trail. A map can also help confirm the route and important locations."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Trail map",
+                  "Knowledge of the planned route",
+                  "Compass or navigation tool"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "Trail markers are signs, symbols, posts, or painted markings placed along established trails to help people follow a route."
+                "Do not create or change official trail markers. Stay on established trails when required and follow signs from park or land officials."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "Pay attention to trail markers when hiking on marked trails, especially near turns, intersections, and changes in the route."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Hikers follow the official markings for their selected trail. A map can also help confirm the route and important locations."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Trail map",
-                "Knowledge of the planned route",
-                "Compass or navigation tool"
+                {
+                  "prefix": "General hiking and navigation information:",
+                  "label": "National Park Service - Ten Essentials",
+                  "url": "https://www.nps.gov/articles/10essentials.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Ten Essentials",
-              "url": "https://www.nps.gov/articles/10essentials.htm"
-            }
-          ],
-          "safety": "Do not create or change official trail markers. Stay on established trails when required and follow signs from park or land officials."
+            },
+            "backText": "← Back to Navigation Skills"
+          }
         },
         {
           "id": "signal-fire",
           "name": "Signal Fire",
+          "description": "Learn how a visible fire or smoke can be used to signal for help.",
           "image": "images/signal-fire.jpg",
-          "description": "A signal fire can help rescuers identify your location during an emergency.",
-          "steps": [
-            "Choose an open location where the signal can be seen.",
-            "Clear flammable material away from the fire area.",
-            "Build and safely light a controlled fire.",
-            "Create visible smoke when signaling is necessary.",
-            "Never leave the fire unattended."
-          ],
-          "imageAlt": "Signal fire producing visible smoke in a wilderness clearing",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Signal fire producing visible smoke",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Signal Fire",
+            "image": "images/signal-fire.jpg",
+            "imageAlt": "Signal fire producing visible smoke in a wilderness clearing",
+            "introduction": [
+              "A signal fire may help attract attention during an emergency where fire use is safe and legally permitted."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A signal fire is intended to make a person's location more noticeable from a distance. The visible flame or smoke may attract attention."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "It may be considered during an emergency when signaling for rescue is necessary and local conditions allow a fire to be used safely."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "The main purpose is visibility. A signal should be placed where it can be noticed without creating a wildfire or another hazard."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Safe fire area",
+                  "Dry fuel",
+                  "Safe ignition source",
+                  "Water or another way to extinguish the fire"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A signal fire is intended to make a person's location more noticeable from a distance. The visible flame or smoke may attract attention."
+                "Fire can spread quickly. Follow local fire restrictions and never start a fire when conditions make it unsafe. Other signaling methods should be used when fire is prohibited."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Sources",
               "paragraphs": [
-                "It may be considered during an emergency when signaling for rescue is necessary and local conditions allow a fire to be used safely."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "The main purpose is visibility. A signal should be placed where it can be noticed without creating a wildfire or another hazard."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Safe fire area",
-                "Dry fuel",
-                "Safe ignition source",
-                "Water or another way to extinguish the fire"
+                {
+                  "prefix": "Emergency signaling information:",
+                  "label": "National Park Service - Ten Essentials",
+                  "url": "https://www.nps.gov/articles/10essentials.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                },
+                {
+                  "prefix": "Fire safety information:",
+                  "label": "National Park Service - Wildland Fire Safety",
+                  "url": "https://www.nps.gov/subjects/fire/wildland-fire-safety-for-park-visitors.htm",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "National Park Service - Ten Essentials",
-              "url": "https://www.nps.gov/articles/10essentials.htm"
             },
-            {
-              "label": "National Park Service - Wildland Fire Safety",
-              "url": "https://www.nps.gov/subjects/fire/wildland-fire-safety-for-park-visitors.htm"
-            }
-          ],
-          "safety": "Fire can spread quickly. Follow local fire restrictions and never start a fire when conditions make it unsafe. Other signaling methods should be used when fire is prohibited."
+            "backText": "← Back to Navigation Skills"
+          }
         },
         {
           "id": "ground-signals",
           "name": "Ground Signals",
+          "description": "Learn how large ground markings can help attract rescuers.",
           "image": "images/ground-signals.jpg",
-          "description": "Large ground signals can make your location easier to see from the air.",
-          "steps": [
-            "Choose a large open area.",
-            "Use rocks, branches, or other visible materials.",
-            "Create a large and simple emergency symbol.",
-            "Make the symbol contrast with the surrounding ground.",
-            "Keep the signal visible while waiting for assistance."
-          ],
-          "imageAlt": "Examples of large emergency ground signals",
-          "sections": [
-            {
-              "heading": "What It Is",
+          "imageAlt": "Examples of emergency ground signals",
+          "buttonText": "Learn More →",
+          "details": {
+            "name": "Ground Signals",
+            "image": "images/ground-signals.jpg",
+            "imageAlt": "Examples of large emergency ground signals",
+            "introduction": [
+              "Large visible ground markings can help make a location easier to notice from a distance."
+            ],
+            "sections": [
+              {
+                "heading": "What It Is",
+                "paragraphs": [
+                  "A ground signal is a large marking created in an open area using materials that contrast with the surrounding ground."
+                ],
+                "items": []
+              },
+              {
+                "heading": "When to Use It",
+                "paragraphs": [
+                  "Ground signals may be useful when trying to make your location more visible to rescuers from a distance."
+                ],
+                "items": []
+              },
+              {
+                "heading": "How It Works",
+                "paragraphs": [
+                  "Materials can be arranged into a large, simple shape in a clear area. The signal should be large enough to stand out from the surrounding landscape."
+                ],
+                "items": []
+              },
+              {
+                "heading": "Materials Needed",
+                "paragraphs": [],
+                "items": [
+                  "Rocks",
+                  "Branches",
+                  "Bright clothing or material",
+                  "Open visible area"
+                ]
+              }
+            ],
+            "safety": {
+              "heading": "Safety Note",
               "paragraphs": [
-                "A ground signal is a large marking created in an open area using materials that contrast with the surrounding ground."
+                "Do not put yourself in danger while making a signal. Avoid cliffs, unstable ground, moving water, and other hazardous areas."
               ],
               "items": []
             },
-            {
-              "heading": "When to Use It",
+            "sources": {
+              "heading": "Source",
               "paragraphs": [
-                "Ground signals may be useful when trying to make your location more visible to rescuers from a distance."
-              ],
-              "items": []
-            },
-            {
-              "heading": "How It Works",
-              "paragraphs": [
-                "Materials can be arranged into a large, simple shape in a clear area. The signal should be large enough to stand out from the surrounding landscape."
-              ],
-              "items": []
-            },
-            {
-              "heading": "Materials Needed",
-              "paragraphs": [],
-              "items": [
-                "Rocks",
-                "Branches",
-                "Bright clothing or material",
-                "Open visible area"
+                {
+                  "prefix": "General emergency preparedness information:",
+                  "label": "American Red Cross - Survival Skills",
+                  "url": "https://www.redcross.org/take-a-class/resources/articles/11-survival-skills-to-know",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer"
+                }
               ]
-            }
-          ],
-          "sources": [
-            {
-              "label": "American Red Cross - Survival Skills",
-              "url": "https://www.redcross.org/take-a-class/resources/articles/11-survival-skills-to-know"
-            }
-          ],
-          "safety": "Do not put yourself in danger while making a signal. Avoid cliffs, unstable ground, moving water, and other hazardous areas."
+            },
+            "backText": "← Back to Navigation Skills"
+          }
         }
-      ],
-      "imageAlt": "Navigation survival skills"
+      ]
     }
   ]
 }

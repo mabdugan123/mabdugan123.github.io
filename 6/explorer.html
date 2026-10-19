@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -10,19 +11,19 @@
     <title>Explorer | Outdoor Survival Skills</title>
 
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="icon"
-          type="image/png"
-          href="images/favicon.png">
+      type="image/png"
+      href="images/favicon.png">
 
     <script src="js/script.js" defer></script>
 </head>
 
+
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header>
+
     <div class="header-container">
 
         <a class="logo" href="index.html">
@@ -30,15 +31,14 @@
         </a>
 
         <nav aria-label="Main navigation">
+
             <ul>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="explorer.html" aria-current="page">
-                        Explorer
-                    </a>
+                    <a href="explorer.html" aria-current="page">Explorer</a>
                 </li>
 
                 <li>
@@ -49,43 +49,38 @@
                     <a href="contact.html">Contact</a>
                 </li>
             </ul>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<main id="main-content" tabindex="-1">
+<main id="explorer-content" aria-busy="true">
+
 
     <section class="page-heading">
+
         <h1>Survival Skills Explorer</h1>
 
         <p>
             Choose a category to start learning
             outdoor survival skills.
         </p>
-    </section>
-
-
-    <p id="explorer-status" class="visually-hidden" role="status"></p>
-    <noscript><p>JavaScript is required for the interactive Explorer. You can still read <a href="basics.html">Survival Basics</a>.</p></noscript>
-
-    <!-- JavaScript will dynamically change this section. -->
-    <section id="explorer-content"
-             class="card-grid"
-             aria-busy="true"
-             aria-label="Survival skill categories">
-
-        <p id="loading-message">
-            Loading survival skills...
-        </p>
 
     </section>
+
+
+    <p role="status">Loading survival skills...</p>
+    <noscript><p>JavaScript is required to use the interactive Explorer.</p></noscript>
+
 
 </main>
 
 
 <footer>
+
     <p>
         &copy; 2026 Murodjon Abduganiev
     </p>
@@ -93,7 +88,9 @@
     <p>
         Outdoor Survival Skills
     </p>
+
 </footer>
+
 
 </body>
 

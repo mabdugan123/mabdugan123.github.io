@@ -1,22 +1,21 @@
 "use strict";
 
-// Keep application configuration and initialization out of the global scope.
-(function initializeApp() {
+// This block keeps the Explorer's data and helpers out of the global scope.
+{
     const DATA_URL = "data/skills.json";
-    const REQUEST_TIMEOUT_MS = 15000;
-    const IMAGE_PATH_PATTERN = /^images\/[\w-]+\.(jpg|png)$/;
+    const explorer = document.querySelector("#explorer-content");
 
-    // Create a DOM node using plain text rather than interpreting data as HTML.
+    // Create plain-text DOM content without treating JSON strings as HTML.
     function createElement(tag, text, className) {
-        const node = document.createElement(tag);
-        if (text) node.textContent = text;
-        if (className) node.className = className;
-        return node;
+        const element = document.createElement(tag);
+        if (text) element.textContent = text;
+        if (className) element.className = className;
+        return element;
     }
 
-    // Store the requested view on a button for the Explorer's click handler.
-    function createButton(text, action, categoryId, skillId) {
-        const button = createElement("button", text);
+    // Identify an internal view change without an href or document navigation.
+    function createButton(text, action, categoryId, skillId, className) {
+        const button = createElement("button", text, className);
         button.type = "button";
         button.dataset.action = action;
         if (categoryId) button.dataset.categoryId = categoryId;
@@ -24,7 +23,7 @@
         return button;
     }
 
-    // Build an image from a validated JSON record and its descriptive alt text.
+    // Preserve the image and alternative text belonging to the original view.
     function createImage(item, className) {
         const image = createElement("img", null, className);
         image.src = item.image;
@@ -32,270 +31,193 @@
         return image;
     }
 
-    // Convert a JSON string array into an ordered or unordered list.
-    function createList(items, tag) {
-        const list = createElement(tag);
-        items.forEach(item => list.append(createElement("li", item)));
-        return list;
+    // Add the original paragraphs in their original order.
+    function appendParagraphs(container, paragraphs) {
+        paragraphs.forEach(text => container.append(createElement("p", text)));
     }
 
-    // Build a reusable category or skill card with a DOM navigation button.
-    function createCard(item, buttonText, action, categoryId, skillId) {
+    // Reuse the original page-heading layout and exact heading text.
+    function createHeading(heading) {
+        const section = createElement("section", null, "page-heading");
+        section.append(createElement("h1", heading.title), createElement("p", heading.description));
+        return section;
+    }
+
+    // Reuse Project 3 cards while replacing only their navigation links.
+    function createCard(item, action, categoryId, skillId) {
         const card = createElement("article", null, "card");
         card.append(
             createImage(item, "category-image"),
-            createElement("h3", item.name),
+            createElement("h2", item.name),
             createElement("p", item.description),
-            createButton(buttonText + item.name + " →", action, categoryId, skillId)
+            createButton(item.buttonText, action, categoryId, skillId)
         );
         return card;
     }
 
-    // Move focus after a user action, but leave initial page-load focus alone.
-    function finishView(container, label, focusTarget) {
-        container.setAttribute("aria-label", label);
-        if (focusTarget) {
-            focusTarget.tabIndex = -1;
-            focusTarget.focus();
+    // Build one original explanation, materials section, or safety note.
+    function createInformation(section, tag = "section", className) {
+        const block = createElement(tag, null, className);
+        block.append(createElement("h2", section.heading));
+        appendParagraphs(block, section.paragraphs);
+        if (section.items.length) {
+            const list = createElement("ul");
+            section.items.forEach(text => list.append(createElement("li", text)));
+            block.append(list);
         }
-    }
-
-    // Display the first choice: the categories supplied by the external JSON.
-    function renderCategories(container, data, moveFocus = false) {
-        container.replaceChildren();
-        container.className = "card-grid";
-        const heading = createElement("h2", "Choose a category", "explorer-heading");
-        container.append(heading);
-        data.categories.forEach(category => {
-            container.append(createCard(category, "Explore ", "skills", category.id));
-        });
-        finishView(container, "Survival skill categories", moveFocus ? heading : null);
-    }
-
-    // Display the second choice: the skills belonging to one category.
-    function renderSkillChoices(container, category) {
-        container.replaceChildren();
-        container.className = "card-grid";
-        const header = createElement("div", null, "explorer-heading");
-        const heading = createElement("h2", category.name + " Skills");
-        header.append(
-            createButton("← Back to Categories", "categories"),
-            heading,
-            createElement("p", category.description)
-        );
-        container.append(header);
-        category.skills.forEach(skill => {
-            container.append(createCard(skill, "Learn ", "details", category.id, skill.id));
-        });
-        finishView(container, category.name + " skills", heading);
-    }
-
-    // Preserve an original explanation or materials section in the detail view.
-    function createInformationSection(section) {
-        const block = createElement("section");
-        block.append(createElement("h3", section.heading));
-        section.paragraphs.forEach(text => block.append(createElement("p", text)));
-        if (section.items.length) block.append(createList(section.items, "ul"));
         return block;
     }
 
-    // Build the safety note copied from the original skill information.
-    function createSafetyNote(text) {
-        const note = createElement("aside", null, "safety-note");
-        note.append(createElement("h3", "Safety Note"), createElement("p", text));
-        return note;
-    }
-
-    // Build source links from records that passed HTTPS URL validation.
+    // Preserve source headings, introductory labels, citations, and link attributes.
     function createSources(sources) {
         const section = createElement("section", null, "source");
-        section.append(createElement("h3", "Sources"));
-        sources.forEach(source => {
+        section.append(createElement("h2", sources.heading));
+        sources.paragraphs.forEach(source => {
+            const paragraph = createElement("p", source.prefix ? source.prefix + " " : "");
+            const citation = createElement("cite");
             const link = createElement("a", source.label);
             link.href = source.url;
-            const paragraph = createElement("p");
-            paragraph.append(link);
+            if (source.target) link.target = source.target;
+            if (source.rel) link.rel = source.rel;
+            citation.append(link);
+            paragraph.append(citation);
             section.append(paragraph);
         });
         return section;
     }
 
-    // Show the full information after the second choice without leaving the page.
-    function renderSkillDetails(container, category, skill) {
-        container.replaceChildren();
-        container.className = "skill-detail";
-        const heading = createElement("h2", skill.name);
-        container.append(
-            createButton("← Back to " + category.name, "skills", category.id),
-            heading,
-            createImage(skill, "skill-detail-image"),
-            createElement("p", skill.description)
-        );
-        skill.sections.forEach(section => container.append(createInformationSection(section)));
-        container.append(
-            createElement("h3", "Steps"),
-            createList(skill.steps, "ol"),
-            createSafetyNote(skill.safety),
-            createSources(skill.sources)
-        );
-        finishView(container, skill.name + " information", heading);
+    // Show the same category names, descriptions, images, and order as Project 3.
+    function createCategoriesView(data) {
+        const grid = createElement("section", null, "card-grid");
+        grid.setAttribute("aria-label", data.gridLabel);
+        data.categories.forEach(category => grid.append(createCard(category, "skills", category.id)));
+        return [createHeading(data.heading), grid];
     }
 
-    // Check required text values before any JSON data reaches a view.
-    function isNonemptyText(value) {
+    // Show the original category page's heading, skill cards, and back control.
+    function createSkillsView(category) {
+        const grid = createElement("section", null, "card-grid");
+        grid.setAttribute("aria-label", category.gridLabel);
+        category.skills.forEach(skill => grid.append(createCard(skill, "details", category.id, skill.id)));
+        return [
+            createHeading(category.heading),
+            grid,
+            createButton(category.backText, "categories", null, null, "back-link")
+        ];
+    }
+
+    // Transfer every original detail paragraph, section, list, and source to DOM.
+    function createDetailsView(category, skill) {
+        const details = skill.details;
+        const article = createElement("article", null, "skill-page");
+        article.append(createElement("h1", details.name), createImage(details));
+        appendParagraphs(article, details.introduction);
+        details.sections.forEach(section => article.append(createInformation(section)));
+        article.append(
+            createInformation(details.safety, "aside", "safety-note"),
+            createSources(details.sources),
+            createButton(details.backText, "skills", category.id, null, "back-link")
+        );
+        return [article];
+    }
+
+    // Give keyboard and screen-reader users a heading after each view change.
+    function showView(nodes, moveFocus = true) {
+        explorer.replaceChildren(...nodes);
+        if (moveFocus) {
+            const heading = explorer.querySelector("h1");
+            heading.tabIndex = -1;
+            heading.focus();
+        }
+    }
+
+    // Check required string values in externally loaded data.
+    function isText(value) {
         return typeof value === "string" && value.trim().length > 0;
     }
 
-    // Empty arrays are valid for optional paragraphs or materials in a section.
-    function isTextArray(values) {
-        return Array.isArray(values) && values.every(isNonemptyText);
-    }
-
-    // Check fields shared by categories and skills, including local image paths.
-    function isValidItem(item) {
-        return Boolean(item)
-            && [item.id, item.name, item.description, item.imageAlt].every(isNonemptyText)
-            && typeof item.image === "string" && IMAGE_PATH_PATTERN.test(item.image);
-    }
-
-    // Accept only complete explanation sections with text arrays.
-    function isValidSection(section) {
-        return Boolean(section) && isNonemptyText(section.heading)
-            && isTextArray(section.paragraphs) && isTextArray(section.items);
-    }
-
-    // Reject malformed or executable source URLs before creating links.
-    function isValidSource(source) {
-        if (!source || !isNonemptyText(source.label) || !isNonemptyText(source.url)) {
-            return false;
-        }
-        try {
-            return new URL(source.url).protocol === "https:";
-        } catch {
-            return false;
-        }
-    }
-
-    // Require all information needed for a complete final skill view.
-    function isValidSkill(skill) {
-        return isValidItem(skill) && isTextArray(skill.steps) && skill.steps.length > 0
-            && isNonemptyText(skill.safety)
-            && Array.isArray(skill.sections) && skill.sections.length > 0
-            && skill.sections.every(isValidSection)
-            && Array.isArray(skill.sources) && skill.sources.length > 0
-            && skill.sources.every(isValidSource);
-    }
-
-    // Reject duplicate IDs so each navigation button identifies one record.
-    function hasUniqueIds(items) {
-        return new Set(items.map(item => item.id)).size === items.length;
-    }
-
-    // Check one category and its complete skill collection.
-    function isValidCategory(category) {
-        return isValidItem(category) && Array.isArray(category.skills)
-            && category.skills.length > 0 && category.skills.every(isValidSkill)
-            && hasUniqueIds(category.skills);
-    }
-
-    // Return validated data instead of mutating application state in this helper.
+    // Reject incomplete data before users reach a partially rendered skill.
     function validateData(data) {
-        if (!data || !Array.isArray(data.categories) || data.categories.length === 0
-            || !data.categories.every(isValidCategory) || !hasUniqueIds(data.categories)) {
-            throw new Error("Invalid survival skill data.");
+        if (!data || !data.heading || !isText(data.heading.title)
+            || !isText(data.heading.description) || !isText(data.gridLabel)
+            || !Array.isArray(data.categories) || !data.categories.length) {
+            throw new Error("Invalid category data.");
         }
+        data.categories.forEach(category => {
+            if (!isText(category.id) || !Array.isArray(category.skills) || !category.skills.length) {
+                throw new Error("Invalid skill choices.");
+            }
+            createSkillsView(category);
+            category.skills.forEach(skill => {
+                if (!isText(skill.id) || !isText(skill.name) || !isText(skill.description)) {
+                    throw new Error("Invalid skill data.");
+                }
+                // Build detached views to catch missing arrays or sections before display.
+                createDetailsView(category, skill);
+            });
+        });
+        createCategoriesView(data);
         return data;
     }
 
-    // Fetch and validate data, always clearing the request timeout afterward.
-    async function fetchSurvivalData() {
-        const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+    // Display a readable failure state when the request or JSON is invalid.
+    function showError() {
+        const message = createElement("p", "Survival skills could not be loaded. Please open this page through a web server and try again.");
+        message.setAttribute("role", "alert");
+        const retryButton = createButton("Try Again", "retry");
+        showView([message, retryButton], false);
+    }
+
+    // Load the JSON asynchronously while leaving the site's navigation available.
+    async function loadSurvivalData() {
+        explorer.setAttribute("aria-busy", "true");
         try {
-            const response = await fetch(DATA_URL, { signal: controller.signal });
-            if (!response.ok) throw new Error("Could not load survival data.");
-            return validateData(await response.json());
+            const response = await fetch(DATA_URL);
+            if (!response.ok) throw new Error("Could not load survival skills.");
+            const data = validateData(await response.json());
+            showView(createCategoriesView(data), false);
+            return data;
+        } catch {
+            showError();
+            return null;
         } finally {
-            clearTimeout(timeout);
+            explorer.setAttribute("aria-busy", "false");
         }
     }
 
-    // Keep a failed request recoverable without navigating away from Explorer.
-    function renderLoadError(container, statusMessage) {
-        container.replaceChildren();
-        const message = createElement("div", null, "explorer-heading error-message");
-        message.append(
-            createElement("h2", "Skills could not be loaded"),
-            createElement("p", "Open this page through Live Server or GitHub Pages, then check your connection and try again."),
-            createButton("Try Again", "retry")
-        );
-        container.append(message);
-        statusMessage.textContent = "Skills could not be loaded. A Try Again button is available.";
-    }
+    // Keep loaded data local and handle only the Explorer's navigation buttons.
+    async function initializeExplorer() {
+        if (!explorer) return;
+        let survivalData = await loadSurvivalData();
 
-    // Own Explorer state locally; navigating choices never reloads the document.
-    function initializeExplorer() {
-        const container = document.querySelector("#explorer-content");
-        if (!container) return;
-        const statusMessage = document.querySelector("#explorer-status");
-        let survivalData;
-
-        // Replace local state only after a successful, validated JSON request.
-        async function loadSurvivalData() {
-            container.className = "card-grid";
-            container.setAttribute("aria-busy", "true");
-            container.replaceChildren(createElement("p", "Loading survival skills…", "explorer-heading"));
-            statusMessage.textContent = "Loading survival skills…";
-            try {
-                survivalData = await fetchSurvivalData();
-                renderCategories(container, survivalData);
-                statusMessage.textContent = "Skills loaded. Choose a category, then a skill.";
-            } catch {
-                renderLoadError(container, statusMessage);
-            } finally {
-                container.setAttribute("aria-busy", "false");
-            }
-        }
-
-        // Route button clicks to renderers; source links retain normal behavior.
-        function handleExplorerClick(event) {
+        // Select an existing category or skill without reloading explorer.html.
+        async function handleExplorerClick(event) {
             const button = event.target.closest("button[data-action]");
-            if (!button || !container.contains(button)) return;
+            if (!button || !explorer.contains(button)) return;
             const action = button.dataset.action;
             if (action === "retry") {
-                loadSurvivalData();
+                const loading = createElement("p", "Loading survival skills...");
+                loading.setAttribute("role", "status");
+                showView([loading], false);
+                survivalData = await loadSurvivalData();
                 return;
             }
             if (!survivalData) return;
             if (action === "categories") {
-                renderCategories(container, survivalData, true);
+                showView(createCategoriesView(survivalData));
                 return;
             }
             const category = survivalData.categories.find(item => item.id === button.dataset.categoryId);
             if (!category) return;
-            if (action === "skills") renderSkillChoices(container, category);
+            if (action === "skills") showView(createSkillsView(category));
             if (action === "details") {
                 const skill = category.skills.find(item => item.id === button.dataset.skillId);
-                if (skill) renderSkillDetails(container, category, skill);
+                if (skill) showView(createDetailsView(category, skill));
             }
         }
 
-        container.addEventListener("click", handleExplorerClick);
-        loadSurvivalData();
-    }
-
-    // Keep the Contact demo local and never put entered values into the URL.
-    function handleContactSubmit(event) {
-        event.preventDefault();
-    }
-
-    // Attach the local-only behavior to the original demonstration form.
-    function initializeContact() {
-        const contactForm = document.querySelector("#contact-form");
-        if (!contactForm) return;
-        contactForm.addEventListener("submit", handleContactSubmit);
+        explorer.addEventListener("click", handleExplorerClick);
     }
 
     initializeExplorer();
-    initializeContact();
-}());
+}
